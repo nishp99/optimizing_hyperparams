@@ -2,7 +2,7 @@ from hyperparameter_opt import EtaOpt
 import numpy as np
 import os
 
-def run(hyper_lr, n_steps_T, n_steps, gamma, dt, loss_constant_size, eta_upper_bound, eta_lower_bound, iters=100, path):
+def run(path, hyper_lr, n_steps_T, n_steps, gamma, dt, loss_constant_size, eta_upper_bound, eta_lower_bound, iters=100):
 	eta_opt = EtaOpt(hyper_lr=hyper_lr, n_steps_T=n_steps_T, n_steps=n_steps, gamma=gamma, dt=dt,
 					 loss_constant_size=loss_constant_size, eta_upper_bound=eta_upper_bound,
 					 eta_lower_bound=eta_lower_bound)

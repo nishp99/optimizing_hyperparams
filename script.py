@@ -40,5 +40,5 @@ eta_lower_bound = 0
 
 
 with executor.batch():
-	job = executor.submit(run, hyper_lr=hyper_lr, n_steps_T=n_steps_T, n_steps=n_steps, gamma=gamma, dt=dt, loss_constant_size=loss_constant_size, eta_upper_bound=eta_upper_bound, eta_lower_bound=eta_lower_bound, path=results_run)
+	job = executor.submit(run, path=results_run, hyper_lr=hyper_lr, n_steps_T=n_steps_T, n_steps=n_steps, gamma=gamma, dt=dt, loss_constant_size=loss_constant_size, eta_upper_bound=eta_upper_bound, eta_lower_bound=eta_lower_bound, path=results_run)
 	#jobs.append(job)
