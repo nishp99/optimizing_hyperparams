@@ -59,6 +59,11 @@ class EtaOpt(object):
         rho, Q = self.compute_ode()
         gamma_t = self.gamma**self.time_span
         loss = torch.sum(rho * gamma_t)*self.dt
+        """loss = self.n_steps
+        for index, ro in enumerate(rho):
+            if 1 - rho < 1e-5:
+                loss = index
+                break"""
         return loss
 
     def hyper_update(self):
